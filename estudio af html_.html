@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.F PEDRAZA - Estudio Musical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0a0a0a;
+      color: #eee;
+    }
+    header {
+      background: url('https://via.placeholder.com/1500x800?text=Estudio+A.F+Pedraza') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: gold;
+      position: relative;
+      text-align: center;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 4rem;
+    }
+    header p {
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: gold;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .services ul, .portfolio ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    .services li, .portfolio li {
+      margin: 1rem 0;
+    }
+    .audio-player, .video-player {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    button {
+      background: gold;
+      border: none;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      border-radius: 10px;
+    }
+    button:hover {
+      transform: scale(1.05);
+      background-color: #ffd700;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #555;
+      background: #222;
+      color: #eee;
+      border-radius: 5px;
+    }
+    .parallax {
+      background: url('https://via.placeholder.com/1500x800?text=M%C3%BAsica+Creativa') no-repeat center center/cover;
+      height: 400px;
+      background-attachment: fixed;
+      position: relative;
+    }
+    .parallax::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A.F PEDRAZA</h1>
+    <p>Las melodías del amor</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido a A.F PEDRAZA</h2>
+    <p>Estudio musical apasionado por capturar cada emoción y transformarla en arte sonoro. Creamos experiencias musicales únicas para cada artista.</p>
+  </section>
+
+  <div class="parallax"></div>
+
+  <section id="servicios" class="services">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Grabación profesional</li>
+      <li>Mezcla y masterización</li>
+      <li>Producción musical personalizada</li>
+      <li>Contratación de grupos musicales</li>
+    </ul>
+  </section>
+
+  <section id="portafolio" class="portfolio">
+    <h2>Portafolio</h2>
+    <p>Descubre nuestras últimas creaciones musicales:</p>
+    <div class="video-player">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D212821367755003&show_text=false&width=734" allowfullscreen></iframe>
+    </div>
+    <div class="audio-player">
+      <audio controls>
+        <source src="tu_audio_demo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+  </section>
+
+  <div class="parallax"></div>
+
+  <section id="sobre" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>A.F PEDRAZA nace de la pasión por la música y el deseo de ofrecer un espacio donde la creatividad y la calidad sonoras se encuentren. Nuestra visión es impulsar a los artistas a alcanzar su máximo potencial, guiados por valores de excelencia, innovación y respeto artístico.</p>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <form action="#">
+      <input type="text" placeholder="Nombre" required>
+      <input type="tel" placeholder="Teléfono">
+      <textarea rows="5" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <p>Teléfono: 7122597264</p>
+    <p>Dirección: Calle Ignacio Allende #02 Col. Centro, Ixtlahuaca, EdoMex</p>
+    <p>Redes Sociales: <a href="https://www.facebook.com/AngelPedraza" target="_blank">Angel Pedraza</a></p>
+    <iframe src="https://maps.google.com/maps?q=Ignacio%20Allende%2002%20Ixtlahuaca&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 A.F PEDRAZA - Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
